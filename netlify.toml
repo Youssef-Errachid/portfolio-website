@@ -1,0 +1,8 @@
+[build]
+publish = "."
+command = ""
+
+[[redirects]]
+  from = "/"
+  to = "/Youssef%20Errachid.html"
+  status = 200

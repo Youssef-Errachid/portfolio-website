@@ -286,29 +286,38 @@ if (contactForm) {
     submitBtn.innerHTML =
       'Sending... <i class="fas fa-spinner fa-spin" style="margin-left: 10px;"></i>';
 
-    // Simulate email sending
-    setTimeout(() => {
-      // Status update
-      formStatus.textContent =
-        "Thank you! Your message has been sent successfully.";
-      formStatus.className = "form-status success";
+    const formData = new FormData(contactForm);
+    fetch(contactForm.action || window.location.pathname, {
+      method: "POST",
+      body: formData,
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Form submission failed");
+        }
 
-      // Reset form
-      contactForm.reset();
+        formStatus.textContent =
+          "Thank you! Your message has been sent successfully.";
+        formStatus.className = "form-status success";
+        contactForm.reset();
+      })
+      .catch(() => {
+        formStatus.textContent =
+          "Oops! Something went wrong. Please try again or email me directly.";
+        formStatus.className = "form-status error";
+      })
+      .finally(() => {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnText;
 
-      // Restore button
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = originalBtnText;
-
-      // Clear status after 5 seconds
-      setTimeout(() => {
-        formStatus.style.opacity = "0";
         setTimeout(() => {
-          formStatus.textContent = "";
-          formStatus.className = "form-status";
-          formStatus.style.opacity = "1";
-        }, 300);
-      }, 5000);
-    }, 1500);
+          formStatus.style.opacity = "0";
+          setTimeout(() => {
+            formStatus.textContent = "";
+            formStatus.className = "form-status";
+            formStatus.style.opacity = "1";
+          }, 300);
+        }, 5000);
+      });
   });
 }
