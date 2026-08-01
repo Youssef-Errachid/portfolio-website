@@ -44,7 +44,6 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
-  cursor: none; /* Custom cursor */
 }
 
 /* Custom Scrollbar */
@@ -77,49 +76,9 @@ a {
   text-decoration: none;
   color: var(--accent);
   transition: var(--transition);
-  cursor: none;
 }
 ul {
   list-style: none;
-}
-
-/* Custom Cursor */
-.cursor-dot {
-  width: 8px;
-  height: 8px;
-  background-color: var(--accent);
-  position: fixed;
-  top: 0;
-  left: 0;
-  border-radius: 50%;
-  z-index: 9999;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  transition:
-    width 0.2s,
-    height 0.2s;
-}
-.cursor-outline {
-  width: 40px;
-  height: 40px;
-  border: 2px solid var(--accent);
-  position: fixed;
-  top: 0;
-  left: 0;
-  border-radius: 50%;
-  z-index: 9998;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  transition:
-    width 0.2s,
-    height 0.2s,
-    background-color 0.2s;
-}
-a:hover ~ .cursor-outline,
-button:hover ~ .cursor-outline {
-  width: 60px;
-  height: 60px;
-  background-color: var(--accent-tint);
 }
 
 /* Layout */
@@ -181,7 +140,6 @@ section {
   font-size: 14px;
   line-height: 1;
   text-decoration: none;
-  cursor: none;
   transition: var(--transition);
   display: inline-block;
   position: relative;
@@ -311,7 +269,6 @@ nav {
 
 .hamburger {
   display: none;
-  cursor: none;
   background: none;
   border: none;
   color: var(--accent);
@@ -908,7 +865,6 @@ nav {
   font-size: 16px;
   outline: none;
   transition: var(--transition);
-  cursor: none;
 }
 .form-group textarea {
   resize: none;

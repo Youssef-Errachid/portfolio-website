@@ -102,37 +102,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Custom Cursor
-const cursorDot = document.getElementById("cursor-dot");
-const cursorOutline = document.getElementById("cursor-outline");
-
-window.addEventListener("mousemove", (e) => {
-  const posX = e.clientX;
-  const posY = e.clientY;
-
-  cursorDot.style.left = `${posX}px`;
-  cursorDot.style.top = `${posY}px`;
-
-  // Adding slight delay for outline
-  cursorOutline.animate(
-    {
-      left: `${posX}px`,
-      top: `${posY}px`,
-    },
-    { duration: 500, fill: "forwards" },
-  );
-});
-
-// Hide cursor when leaving window
-document.addEventListener("mouseleave", () => {
-  cursorDot.style.display = "none";
-  cursorOutline.style.display = "none";
-});
-document.addEventListener("mouseenter", () => {
-  cursorDot.style.display = "block";
-  cursorOutline.style.display = "block";
-});
-
 // Current Year for Footer
 document.getElementById("year").textContent = new Date().getFullYear();
 
