@@ -855,10 +855,19 @@
             class="contact-form"
             name="contact"
             method="POST"
-            action="/Youssef%20Errachid.html"
             data-netlify="true"
+            netlify-honeypot="bot-field"
+            action="/thank-you.html"
           >
             <input type="hidden" name="form-name" value="contact" />
+
+            <p hidden>
+              <label>
+                Don't fill this out:
+                <input name="bot-field" />
+              </label>
+            </p>
+
             <div class="form-row">
               <div class="form-group">
                 <input
@@ -871,6 +880,7 @@
                 <label for="name">Name</label>
                 <span class="input-bar"></span>
               </div>
+
               <div class="form-group">
                 <input
                   type="email"
@@ -913,11 +923,12 @@
                 Send Message
                 <i class="fas fa-paper-plane" style="margin-left: 10px"></i>
               </button>
+
               <div class="email-fallback">
                 or email directly at
-                <a href="mailto:yousseferrachid91@gmail.com" class="email-link"
-                  >yousseferrachid91@gmail.com</a
-                >
+                <a href="mailto:yousseferrachid91@gmail.com" class="email-link">
+                  yousseferrachid91@gmail.com
+                </a>
               </div>
             </div>
           </form>
