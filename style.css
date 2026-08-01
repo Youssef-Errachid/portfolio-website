@@ -115,9 +115,9 @@ section { padding: 100px 0; max-width: 1000px; margin: 0 auto; }
     z-index: -1;
 }
 .btn:hover::before { transform: translateY(0); }
-.btn:hover { color: var(--bg-primary); background-color: var(--accent); box-shadow: 0 0 15px rgba(100, 255, 218, 0.4); }
+.btn:hover { color: var(--bg-primary); background-color: var(--accent); box-shadow: 0 8px 24px rgba(100, 255, 218, 0.28); transform: translateY(-2px); }
 .btn-fill { background-color: var(--accent); color: var(--bg-primary); box-shadow: 0 0 10px rgba(100, 255, 218, 0.2); }
-.btn-fill:hover { background-color: transparent; color: var(--accent); box-shadow: 0 0 15px rgba(100, 255, 218, 0.4); }
+.btn-fill:hover { background-color: transparent; color: var(--accent); box-shadow: 0 8px 24px rgba(100, 255, 218, 0.28); transform: translateY(-2px); }
 
 /* Navbar */
 nav {
