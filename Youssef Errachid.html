@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youssef Errachid | Full-Stack Developer</title>
+    <meta name="description"
+        content="Youssef Errachid is a Full-Stack Developer specializing in building exceptional digital experiences.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+
+    <!-- Background Elements -->
+    <div class="particles"></div>
+    <div class="gradient-blob"></div>
+    <div class="gradient-blob two"></div>
+
+    <!-- Social Sidebars (Desktop) -->
+    <div class="social-left reveal delay-4 active">
+        <ul>
+            <li><a href="https://github.com/Youssef-Errachid" target="_blank" aria-label="GitHub"><i
+                        class="fab fa-github"></i></a></li>
+            <li><a href="http://linkedin.com/in/youssef-errachid" target="_blank" aria-label="LinkedIn"><i
+                        class="fab fa-linkedin-in"></i></a></li>
+            <li><a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+        </ul>
+    </div>
+    <div class="email-right reveal delay-4 active">
+        <a href="mailto:yousseferrachid91@gmail.com">yousseferrachid91@gmail.com</a>
+    </div>
+
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo" id="main-logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">Youssef Errachid</span>
+                <span class="logo-slash">/&gt;</span>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about"><span>01.</span> About</a></li>
+                <li><a href="#experience"><span>02.</span> Experience</a></li>
+                <li><a href="#skills"><span>03.</span> Skills</a></li>
+                <li><a href="#projects"><span>04.</span> Work</a></li>
+                <li><a href="#contact"><span>05.</span> Contact</a></li>
+                <li><a href="#" class="btn btn-fill" style="margin-left: 15px; padding: 0.75rem 1rem;">Resume</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="hero-content">
+                <div class="badge reveal active">
+                    <div class="badge-dot"></div> Open to Opportunities
+                </div>
+                <p class="hero-top reveal delay-1 active">Hi, my name is</p>
+                <h1 class="hero-title reveal delay-2 active">Youssef Errachid.</h1>
+                <h2 class="hero-subtitle reveal delay-3 active"><span id="typewriter"></span><span
+                        style="color:var(--accent);">|</span></h2>
+                <p class="hero-desc reveal delay-4 active">
+                    I'm a self-driven Full-Stack Developer specializing in building (and occasionally designing)
+                    exceptional digital experiences. Currently, I'm focused on building accessible, human-centered
+                    products and expanding my technological horizons.
+                </p>
+                <div class="hero-cta reveal delay-4 active">
+                    <a href="#projects" class="btn">Check out my work!</a>
+                    <a href="mailto:yousseferrachid91@gmail.com" class="btn btn-fill">Get in Touch <i
+                            class="fas fa-arrow-right" style="margin-left:8px;"></i></a>
+                </div>
+            </div>
+            <div class="hero-right reveal delay-4 active">
+                <!-- Tab Switcher -->
+                <div class="hero-tab-switcher">
+                    <button class="hero-tab active" id="tab-image" onclick="switchHeroTab('image')">
+                        <i class="fas fa-user"></i> Image
+                    </button>
+                    <button class="hero-tab" id="tab-terminal" onclick="switchHeroTab('terminal')">
+                        <i class="fas fa-terminal"></i> Terminal
+                    </button>
+                    <div class="tab-indicator"></div>
+                </div>
+
+                <!-- Image Panel (default) -->
+                <div class="hero-panel hero-panel-image active" id="panel-image">
+                    <div class="hero-image-wrapper">
+                        <div class="image-ring"></div>
+                        <div class="orbit-track">
+                            <div class="orbit-dot dot-1"></div>
+                            <div class="orbit-dot dot-2"></div>
+                            <div class="orbit-dot dot-3"></div>
+                        </div>
+                        <div class="image-frame">
+                            <img src="images/profile.png" alt="Youssef Errachid" class="hero-image"
+                                onerror="this.src='https://images.unsplash.com/photo-1549692520-acc6669e2f0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80'">
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="corner-accent top-left"></div>
+                        <div class="corner-accent top-right"></div>
+                        <div class="corner-accent bottom-left"></div>
+                        <div class="corner-accent bottom-right"></div>
+                        <div class="floating-tag">
+                            <span class="tag-bracket">&lt;</span>developer<span class="tag-bracket"> /&gt;</span>
+                        </div>
+                        <div class="status-indicator">
+                            <span class="status-dot"></span>
+                            <span class="status-text">Available</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Terminal Panel -->
+                <div class="hero-panel hero-panel-terminal" id="panel-terminal">
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <div class="terminal-dots">
+                                <span class="t-dot t-red"></span>
+                                <span class="t-dot t-yellow"></span>
+                                <span class="t-dot t-green"></span>
+                            </div>
+                            <div class="terminal-title">youssef@portfolio:~</div>
+                            <div class="terminal-minimize"><i class="fas fa-minus"></i></div>
+                        </div>
+                        <div class="terminal-body" id="terminal-body">
+                            <div class="terminal-output" id="terminal-output"></div>
+                            <div class="terminal-input-line">
+                                <span class="terminal-prompt" id="terminal-prompt">visitor@youssef:~$</span>
+                                <input type="text" class="terminal-input" id="terminal-input" autocomplete="off"
+                                    spellcheck="false" autofocus>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section-container">
+            <h2 class="section-heading reveal">About Me</h2>
+            <div class="about-inner">
+                <div class="about-text reveal">
+                    <p>Hello! My name is Youssef and I enjoy creating things that live on the internet. My interest in
+                        software development started back when I began dissecting complex problems and realized the
+                        power of architecting elegant solutions.</p>
+                    <p>At 25, my journey is driven by an unwavering passion for technology and a proactive, self-taught
+                        approach. Fast-forward to today, I dedicate my time to personal projects, mastering robust
+                        backend logic, and crafting intuitive user interfaces.</p>
+                    <p>Here are a few principles that drive my work:</p>
+                    <ul
+                        style="display:grid; grid-template-columns:repeat(2, 1fr); gap:10px; margin:20px 0; font-family:var(--font-mono); font-size:13px;">
+                        <li><i class="fas fa-caret-right" style="color:var(--accent); margin-right:5px;"></i>
+                            Algorithmic Prowess</li>
+                        <li><i class="fas fa-caret-right" style="color:var(--accent); margin-right:5px;"></i>
+                            Project-Centric Dev</li>
+                        <li><i class="fas fa-caret-right" style="color:var(--accent); margin-right:5px;"></i> Full-Stack
+                            Aspiration</li>
+                        <li><i class="fas fa-caret-right" style="color:var(--accent); margin-right:5px;"></i> Perpetual
+                            Growth</li>
+                    </ul>
+
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-num">2+</div>
+                            <div class="stat-text">Years of Coding Experience</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-num">10+</div>
+                            <div class="stat-text">Completed Projects</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Timeline -->
+        <section id="experience">
+            <h2 class="section-heading reveal">My Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-icon"><i class="fas fa-laptop-code"></i></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Present</span>
+                        <h3 class="timeline-title">Full-Stack Development Journey</h3>
+                        <p class="timeline-org">Self-Directed Learning & Projects</p>
+                        <p class="timeline-desc">Intensively building project-based skills through platforms like
+                            freeCodeCamp and The Odin Project. Developing robust desktop and web applications to
+                            solidify core concepts in OOP, databases, and modern frameworks.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-icon"><i class="fas fa-university"></i></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2021 — 2023</span>
+                        <h3 class="timeline-title">Foundation in Technology</h3>
+                        <p class="timeline-org">School of Technology (EST), Khenifra</p>
+                        <p class="timeline-desc">Completed foundational studies in technology, acquiring core analytical
+                            and technical skills that set the stage for my transition into software engineering.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2020 — 2021</span>
+                        <h3 class="timeline-title">Baccalaureate in Life and Earth Sciences</h3>
+                        <p class="timeline-org">High School Diploma</p>
+                        <p class="timeline-desc">Graduated with a focus on scientific disciplines, fostering a strong
+                            methodical and problem-solving mindset.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2 class="section-heading reveal">Technical Arsenal</h2>
+            <div class="skills-grid">
+                <div class="skill-card reveal">
+                    <i class="fas fa-code skill-icon"></i>
+                    <h3>Languages</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">C / C++</span>
+                        <span class="skill-tag">C#</span>
+                        <span class="skill-tag">JavaScript (ES6+)</span>
+                        <span class="skill-tag">Python</span>
+                    </div>
+                </div>
+                <div class="skill-card reveal delay-1">
+                    <i class="fas fa-layer-group skill-icon"></i>
+                    <h3>Web Technologies</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">HTML5 / CSS3</span>
+                        <span class="skill-tag">React.js</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express</span>
+                    </div>
+                </div>
+                <div class="skill-card reveal delay-2">
+                    <i class="fas fa-database skill-icon"></i>
+                    <h3>Databases</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">SQL Server</span>
+                        <span class="skill-tag">T-SQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                    </div>
+                </div>
+                <div class="skill-card reveal delay-3">
+                    <i class="fas fa-tools skill-icon"></i>
+                    <h3>Tools & Concepts</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Git & GitHub</span>
+                        <span class="skill-tag">OOP</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">Docker</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2 class="section-heading reveal">Some Things I've Built</h2>
+
+            <!-- Filter Tabs -->
+            <div class="projects-filter reveal">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="java">Java / Java EE</button>
+                <button class="filter-btn" data-filter="javascript">JavaScript</button>
+                <button class="filter-btn" data-filter="cpp">C++</button>
+            </div>
+
+            <div class="projects-grid">
+                <!-- E-Social Systems -->
+                <div class="project reveal" data-cat="java">
+                    <div class="project-img">
+                        <img src="images/e-social-systems.png"
+                            alt="e-Social Systems – Java EE Social Security Management Platform">
+                    </div>
+
+                    <div class="project-content">
+                        <div class="project-top">
+                            <i class="far fa-folder folder-icon"></i>
+                            <div class="project-links">
+                                <a href="https://github.com/Youssef-Errachid/e-Social-Systems.git" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3 class="project-title">
+                            <a href="https://github.com/Youssef-Errachid/e-Social-Systems.git" target="_blank">
+                                e-Social Systems – Enterprise Social Security Application
+                            </a>
+                        </h3>
+
+                        <p class="project-desc">
+                            <span class="desc-short">
+                                A full-stack Java EE web application designed to simulate an institutional social
+                                security system (like CNSS) managing employers, insured workers, monthly salary
+                                declarations, and complex contribution logic.
+                            </span>
+                            <span class="desc-full">
+                                Built using enterprise architecture, this system manages the intricate business
+                                workflows of corporate social declarations. It leverages JPA (Java Persistence API) and
+                                Hibernate for ORM mapping over a relational MySQL/PostgreSQL database, enforcing data
+                                integrity for multi-column unique constraints (Employer, Month, Year). The application
+                                features an automatic calculations engine executing localized legal rules for employee
+                                vs. employer contribution splits under a designated contribution ceiling, tracks dynamic
+                                history profiles, and renders records through programmatic JSP views orchestrated by
+                                native Java Servlets.
+                            </span>
+                        </p>
+
+                        <button class="show-more-btn" data-toggle="true">
+                            Show more
+                        </button>
+
+                        <div class="project-tech">
+                            <span>Java EE</span>
+                            <span>Servlets & JSP</span>
+                            <span>JPA / Hibernate</span>
+                            <span>MySQL</span>
+                            <span>Tomcat</span>
+                            <span>MVC Architecture</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- FenPay Project -->
+                <div class="project reveal" data-cat="java">
+                    <div class="project-img">
+                        <img src="images/finpay.png" alt="FinPay – Payment Management System">
+                    </div>
+
+                    <div class="project-content">
+                        <div class="project-top">
+                            <i class="far fa-folder folder-icon"></i>
+                            <div class="project-links">
+                                <a href="https://github.com/Youssef-Errachid/FinPay" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3 class="project-title">
+                            <a href="https://github.com/Youssef-Errachid/FinPay" target="_blank">
+                                FinPay – Payment & Invoicing Management System
+                            </a>
+                        </h3>
+
+                        <p class="project-desc">
+                            <span class="desc-short">
+                                A Java-based FinTech management system that centralizes and secures electronic payments
+                                between clients,
+                                service providers, and the FinPay platform.
+                            </span>
+                            <span class="desc-full">
+                                It allows managing clients, providers, invoices, and payments with automatic commission
+                                calculation,
+                                payment tracking, and financial statistics. The system supports partial payments,
+                                invoice status updates,
+                                and full transaction history, simulating a real-world payment gateway used by clinics
+                                and service companies.
+                                It also includes reporting features and document generation such as PDF invoices and
+                                payment receipts,
+                                along with Excel exports for financial reporting and analysis.
+                            </span>
+                        </p>
+
+                        <button class="show-more-btn" data-toggle="true">
+                            Show more
+                        </button>
+
+                        <div class="project-tech">
+                            <span>Java</span>
+                            <span>JDBC</span>
+                            <span>MySQL</span>
+                            <span>PDF Generation</span>
+                            <span>Excel Export</span>
+                            <span>OOP</span>
+                            <span>Maven</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- XTrade Project -->
+                <div class="project reveal" data-cat="java">
+                    <div class="project-img">
+                        <img src="images/XTrade.png" alt="XTrade – Simplified Trading System">
+                    </div>
+
+                    <div class="project-content">
+                        <div class="project-top">
+                            <i class="far fa-folder folder-icon"></i>
+                            <div class="project-links">
+                                <a href="https://github.com/Youssef-Errachid/Xtrade-App-" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3 class="project-title">
+                            <a href="https://github.com/Youssef-Errachid/Xtrade-App-" target="_blank">
+                                XTrade – Simplified Trading System
+                            </a>
+                        </h3>
+
+                        <p class="project-desc">
+                            <span class="desc-short">
+                                XTrade is a Java console application developed using Object-Oriented Programming
+                                principles to simulate a simplified financial trading platform.
+                            </span>
+                            <span class="desc-full">
+                                The system allows traders to manage virtual portfolios, buy and sell financial assets
+                                such as stocks and cryptocurrencies, and track transaction history in a simulated market
+                                environment. It also includes portfolio performance analysis, transaction filtering and
+                                sorting using the Java Stream API, data validation, and export features for transaction
+                                history.
+                            </span>
+                        </p>
+
+                        <button class="show-more-btn" data-toggle="true">
+                            Show more
+                        </button>
+
+                        <div class="project-tech">
+                            <span>Java</span>
+                            <span>OOP</span>
+                            <span>Console App</span>
+                            <span>Data Validation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- E-BANK Project -->
+                <div class="project reveal" data-cat="java">
+                    <div class="project-img">
+                        <img src="images/E-bank.png" alt="E-BANK – Bank Management System">
+                    </div>
+
+                    <div class="project-content">
+                        <div class="project-top">
+                            <i class="far fa-folder folder-icon"></i>
+                            <div class="project-links">
+                                <a href="https://github.com/Youssef-Errachid/E-BANK-Bank-Management-System"
+                                    target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3 class="project-title">
+                            <a href="https://github.com/Youssef-Errachid/E-BANK-Bank-Management-System" target="_blank">
+                                E-BANK – Bank Management System
+                            </a>
+                        </h3>
+
+                        <p class="project-desc">
+                            <span class="desc-short">
+                                A Java console application built using Object-Oriented Programming principles that
+                                simulates basic banking operations.
+                            </span>
+                            <span class="desc-full">
+                                It allows managing customers and accounts, including creating accounts, deposits,
+                                withdrawals, balance checks, transfers, and account deletion. The system also supports
+                                savings accounts with interest calculation and includes data validation to ensure secure
+                                and reliable transactions.
+                            </span>
+                        </p>
+
+                        <button class="show-more-btn" data-toggle="true">
+                            Show more
+                        </button>
+
+                        <div class="project-tech">
+                            <span>Java</span>
+                            <span>OOP</span>
+                            <span>Console App</span>
+                            <span>Data Validation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Online Course Management System -->
+                <div class="project reveal" data-cat="java">
+                    <div class="project-img">
+                        <img src="images/course-management.png"
+                            alt="Online Course Management System – Java Console App">
+                    </div>
+
+                    <div class="project-content">
+                        <div class="project-top">
+                            <i class="far fa-folder folder-icon"></i>
+                            <div class="project-links">
+                                <a href="https://github.com/Youssef-Errachid/System-de-gestion-de-cours-en-line.git"
+                                    target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3 class="project-title">
+                            <a href="https://github.com/Youssef-Errachid/System-de-gestion-de-cours-en-line.git"
+                                target="_blank">
+                                EduManager – Online Course Management System
+                            </a>
+                        </h3>
+
+                        <p class="project-desc">
+                            <span class="desc-short">
+                                A Java console application designed around core Object-Oriented Programming (OOP)
+                                principles to simulate an online learning platform ecosystem.
+                            </span>
+                            <span class="desc-full">
+                                This application manages bidirectional relationships between distinct entity models,
+                                including Students, Instructors, and Courses. It implements clean data binding
+                                mechanisms where student registrations dynamically update course rosters, and instructor
+                                assignments update individual course states. The project heavily relies on Java
+                                Collections framework APIs (specifically ArrayLists) to handle custom lookups, avoid
+                                duplicate entries using lookups, and feature defensive terminal input buffering with
+                                robust type validation to avoid runtime crash loops.
+                            </span>
+                        </p>
+
+                        <button class="show-more-btn" data-toggle="true">
+                            Show more
+                        </button>
+
+                        <div class="project-tech">
+                            <span>Java</span>
+                            <span>OOP</span>
+                            <span>Collections Framework</span>
+                            <span>Console App</span>
+                            <span>Input Validation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Library Management System -->
+                <div class="project reveal" data-cat="javascript">
+                    <div class="project-img">
+                        <img src="images/library-system.png" alt="Library Management System – JS Console App">
+                    </div>
+
+                    <div class="project-content">
+                        <div class="project-top">
+                            <i class="far fa-folder folder-icon"></i>
+                            <div class="project-links">
+                                <a href="https://github.com/Youssef-Errachid/Library-Management-System" target="_blank"
+                                    title="View on GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3 class="project-title">
+                            <a href="https://github.com/Youssef-Errachid/Library-Management-System" target="_blank">
+                                BiblioManager – Library Management System
+                            </a>
+                        </h3>
+
+                        <p class="project-desc">
+                            <span class="desc-short">
+                                A relational JavaScript console application built with Node.js that simulates a library
+                                infrastructure managing books, subscribers, and transaction states.
+                            </span>
+                            <span class="desc-full">
+                                This terminal application implements a multi-layered nested menu architecture to handle
+                                core library logistics. It supports dynamic creation and structural validation for
+                                inventory items, subscriber registration with automated incremental IDs, and real-time
+                                state mutations. The system mimics data normalization across multiple object arrays,
+                                handling explicit validation flags to check tracking availability, enforce existing
+                                keys, prevent multi-borrow conflicts, and dynamically manage session dates.
+                            </span>
+                        </p>
+
+                        <button class="show-more-btn" data-toggle="true">
+                            Show more
+                        </button>
+
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>Node.js</span>
+                            <span>Console App</span>
+                            <span>Relational Logic</span>
+                            <span>State Management</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- To-Do List -->
+                <div class="project reveal" data-cat="javascript">
+                    <div class="project-img">
+                        <img src="images/todo-list.png" alt="To-Do List – JS Console App">
+                    </div>
+
+                    <div class="project-content">
+                        <div class="project-top">
+                            <i class="far fa-folder folder-icon"></i>
+                            <div class="project-links">
+                                <a href="https://github.com/Youssef-Errachid/Todo-List-Manager" target="_blank"
+                                    title="View on GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3 class="project-title">
+                            <a href="https://github.com/Youssef-Errachid/Todo-List-Manager" target="_blank">
+                                Taskify – Interactive To-Do List Manager
+                            </a>
+                        </h3>
+
+                        <p class="project-desc">
+                            <span class="desc-short">
+                                A clean JavaScript console application built with Node.js that performs full CRUD
+                                operations on an in-memory task database.
+                            </span>
+                            <span class="desc-full">
+                                This task manager handles data manipulation using array methods. It features dynamic
+                                addition, custom linear-search lookup filters, and dynamic array mutation. The system
+                                utilizes control structures to handle state toggles (completed vs. pending status) and
+                                implements runtime validation boundaries to prevent array index overflow during task
+                                updates or state transformations.
+                            </span>
+                        </p>
+
+                        <button class="show-more-btn" data-toggle="true">
+                            Show more
+                        </button>
+
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>Node.js</span>
+                            <span>Console App</span>
+                            <span>CRUD Operations</span>
+                            <span>Array Manipulation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Calculator -->
+                <div class="project reveal" data-cat="javascript">
+                    <div class="project-img">
+                        <img src="images/calculator.png" alt="JavaScript Console Calculator App">
+                    </div>
+
+                    <div class="project-content">
+                        <div class="project-top">
+                            <i class="far fa-folder folder-icon"></i>
+                            <div class="project-links">
+                                <a href="https://github.com/Youssef-Errachid/calculator-project-.git" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3 class="project-title">
+                            <a href="https://github.com/Youssef-Errachid/calculator-project-.git" target="_blank">
+                                JS CALCULATOR – JavaScript Console App
+                            </a>
+                        </h3>
+
+                        <p class="project-desc">
+                            <span class="desc-short">
+                                A dynamic JavaScript console-based calculator that processes arithmetic and scientific
+                                operations with continuous history logging.
+                            </span>
+                            <span class="desc-full">
+                                Built using Node.js and user input synchronization, this application features an
+                                interactive terminal menu for executing operations such as addition, subtraction,
+                                multiplication, division, exponentiation, square roots, and factorials. It incorporates
+                                robust mathematical evaluation logic, zero-division error handling, dynamic input
+                                validation, and stores runtime session data into structured objects inside an array for
+                                clear post-execution activity tracking.
+                            </span>
+                        </p>
+
+                        <button class="show-more-btn" data-toggle="true">
+                            Show more
+                        </button>
+
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>Node.js</span>
+                            <span>Console App</span>
+                            <span>Data Validation</span>
+                            <span>Data Structures</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rock Paper Scissors Game -->
+                <div class="project reveal" data-cat="cpp">
+                    <div class="project-img">
+                        <img src="images/rock-paper-scissors.png" alt="Rock Paper Scissors Game - C++ Console App">
+                    </div>
+
+                    <div class="project-content">
+                        <div class="project-top">
+                            <i class="far fa-folder folder-icon"></i>
+                            <div class="project-links">
+                                <a href="https://github.com/Youssef-Errachid/Rock-Paper-ScissRock-Paper-Scissors-gameors-game/tree/master"
+                                    target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3 class="project-title">
+                            <a href="https://github.com/Youssef-Errachid/Rock-Paper-ScissRock-Paper-Scissors-gameors-game/tree/master"
+                                target="_blank">
+                                ROCK PAPER SCISSORS GAME – C++ Console App
+                            </a>
+                        </h3>
+
+                        <p class="project-desc">
+                            <span class="desc-short">
+                                A C++ console game where the player competes against the computer in Rock, Paper,
+                                Scissors.
+                            </span>
+                            <span class="desc-full">
+                                The game uses random number generation for computer moves and applies classic rules to
+                                determine the winner of each round.
+                                It tracks scores across multiple rounds, stores results using structs, and displays
+                                detailed game statistics including wins, losses, and draws.
+                                The project demonstrates structured programming concepts such as enums, functions, and
+                                control flow in C++.
+                            </span>
+                        </p>
+
+                        <button class="show-more-btn" data-toggle="true">
+                            Show more
+                        </button>
+
+                        <div class="project-tech">
+                            <span>C++</span>
+                            <span>Console App</span>
+                            <span>Enums</span>
+                            <span>Structs</span>
+                            <span>Random Logic</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Math Quiz Game -->
+                <div class="project reveal" data-cat="cpp">
+                    <div class="project-img">
+                        <img src="images/math-quiz-game.png" alt="Math Quiz Game - C++ Console App">
+                    </div>
+
+                    <div class="project-content">
+                        <div class="project-top">
+                            <i class="far fa-folder folder-icon"></i>
+
+                            <div class="project-links">
+                                <a href="https://github.com/Youssef-Errachid/Math-Quiz-Game/blob/master/MathOperationsQuiz.cpp"
+                                    target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3 class="project-title">
+                            <a href="https://github.com/Youssef-Errachid/Math-Quiz-Game/blob/master/MathOperationsQuiz.cpp"
+                                target="_blank">
+                                MATH QUIZ GAME – C++ Console App
+                            </a>
+                        </h3>
+
+                        <p class="project-desc">
+                            <span class="desc-short">
+                                A C++ console-based quiz game that generates random math questions with different
+                                difficulty levels.
+                            </span>
+                            <span class="desc-full">
+                                The application challenges the player with arithmetic problems including addition,
+                                subtraction, multiplication, and division.
+                                It supports multiple difficulty levels, random question generation, and real-time answer
+                                validation.
+                                The system tracks correct and wrong answers and determines whether the player passes or
+                                fails the quiz.
+                                This project demonstrates structured programming using enums, structs, functions, and
+                                random logic in C++.
+                            </span>
+                        </p>
+
+                        <button class="show-more-btn" data-toggle="true">
+                            Show more
+                        </button>
+
+                        <div class="project-tech">
+                            <span>C++</span>
+                            <span>Console App</span>
+                            <span>Enums</span>
+                            <span>Structs</span>
+                            <span>Random Generation</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- GitHub CTA -->
+            <div class="projects-cta reveal">
+                <p>Want to see more of my work?</p>
+                <a href="https://github.com/Youssef-Errachid" target="_blank" class="btn" id="github-cta-btn">
+                    <i class="fab fa-github" style="margin-right: 10px;"></i>View all on GitHub
+                </a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <p style="color:var(--accent); font-family:var(--font-mono); margin-bottom:10px;" class="reveal">05. What's
+                Next?</p>
+            <h2 class="contact-title reveal">Get In Touch</h2>
+            <p class="contact-desc reveal">
+                Although I'm not currently looking for any new opportunities, my inbox is always open. Whether you have
+                a question or just want to say hi, I'll try my best to get back to you!
+            </p>
+
+            <div class="contact-form-wrapper reveal">
+                <form id="contact-form" class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required placeholder=" ">
+                            <label for="name">Name</label>
+                            <span class="input-bar"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required placeholder=" ">
+                            <label for="email">Email</label>
+                            <span class="input-bar"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" required placeholder=" ">
+                        <label for="subject">Subject</label>
+                        <span class="input-bar"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
+                        <label for="message">Message</label>
+                        <span class="input-bar"></span>
+                    </div>
+
+                    <div class="form-footer">
+                        <button type="submit" class="btn btn-fill submit-btn">
+                            Send Message <i class="fas fa-paper-plane" style="margin-left: 10px;"></i>
+                        </button>
+                        <div class="email-fallback">
+                            or email directly at <a href="mailto:yousseferrachid91@gmail.com"
+                                class="email-link">yousseferrachid91@gmail.com</a>
+                        </div>
+                    </div>
+                </form>
+                <div class="form-status" id="form-status"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-socials">
+            <a href="https://github.com/Youssef-Errachid"><i class="fab fa-github"></i></a>
+            <a href="http://linkedin.com/in/youssef-errachid"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <p>Designed & Built with passion by Youssef Errachid.</p>
+        <p style="margin-top: 5px; opacity: 0.6;">&copy; <span id="year"></span> All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="script.js"></script>
+    <script src="terminal.js"></script>
+</body>
+
+</html>sk-or-v1-7f06e134dd8732a65a6808412197b86c678a91ed5fbf1d2f35a6f63de3be3252ii
