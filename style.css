@@ -20,6 +20,19 @@
   --shadow-sm: 0 4px 6px -1px rgba(2, 12, 27, 0.7);
   --shadow-md: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
   --shadow-lg: 0 20px 30px -15px rgba(2, 12, 27, 0.7);
+
+  /* Spacing system (8px scale) */
+  --space-6: 48px; /* 6 * 8px */
+  --space-7: 56px; /* 7 * 8px (chosen for balanced spacing) */
+  --space-8: 64px; /* 8 * 8px */
+
+  /* Hero & sidebar spacing (use the 8px system above) */
+  --side-spacing: var(
+    --space-7
+  ); /* distance from viewport edge to social/email */
+  --hero-horizontal: var(
+    --space-7
+  ); /* horizontal padding for hero to balance content */
 }
 
 /* Base & Reset */
@@ -308,10 +321,12 @@ nav {
   align-items: center;
 }
 .social-left {
-  left: 40px;
+  /* Move social icons slightly farther from the left edge using 8px scale */
+  left: var(--side-spacing);
 }
 .email-right {
-  right: 40px;
+  /* Move vertical email slightly farther from the right edge using 8px scale */
+  right: var(--side-spacing);
 }
 .social-left ul {
   display: flex;
@@ -364,14 +379,18 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0;
+  /* Add symmetric horizontal padding so hero content is balanced
+     between left social links and right email. Uses 8px spacing variable. */
+  padding: 0 var(--hero-horizontal);
   max-width: 1100px;
   margin: 0 auto;
   position: relative;
 }
 .hero-content {
   flex: 1;
-  padding-right: 50px;
+  /* Internal horizontal padding for the text column (3 * 8px = 24px)
+     helps text breathe without changing layout structure. */
+  padding: 0 24px;
 }
 .hero-right {
   flex: 1;
@@ -423,10 +442,13 @@ nav {
     flex-direction: column-reverse;
     justify-content: center;
     text-align: center;
-    padding-top: 100px;
+    /* Keep the top spacing but also add modest horizontal padding on small screens
+       so content doesn't touch screen edges (3 * 8px = 24px). */
+    padding: 100px 24px 0;
   }
   .hero-content {
-    padding-right: 0;
+    /* Restore internal horizontal padding for small screens for better breathing room */
+    padding: 0 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
