@@ -149,7 +149,7 @@ export default function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-fill"
-              style={{ marginLeft: '15px', padding: '0.75rem 1rem', color: 'var(--bg-primary)' }}
+              style={{ marginLeft: '15px', padding: '0.75rem 1rem' }}
               onClick={closeMenu}
             >
               Resume

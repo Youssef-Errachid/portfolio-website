@@ -280,6 +280,13 @@ nav {
   color: var(--accent);
 }
 
+.nav-links a.btn-fill {
+  color: var(--bg-primary);
+}
+.nav-links a.btn-fill:hover {
+  color: var(--accent);
+}
+
 .hamburger {
   display: none;
   background: none;
